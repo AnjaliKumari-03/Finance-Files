@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+svg {
+  outline: none;
+}
+html, body {
+  overflow-x: hidden;
+}
+/* LIGHT MODE */
+.light-mode {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* DARK MODE */
+.dark-mode {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+/* CARDS */
+.dark-mode .bg-white {
+  background-color: #1f2937 !important;
+}
+
+/* TEXT */
+.dark-mode .text-black {
+  color: #f9fafb !important;
+}
+
+/* SIDEBAR */
+.dark-mode .bg-gray-900 {
+  background-color: #111827 !important;
+}
