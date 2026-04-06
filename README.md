@@ -171,7 +171,7 @@ git clone https://github.com/AnjaliKumari-03/Finance-Files.git
 ### 2. Navigate to Project Folder
 
 ```bash
-cd finance-dashboard
+cd Finance-Files
 ```
 
 ### 3. Install Dependencies
@@ -197,27 +197,7 @@ http://localhost:5173
 ## 📁 Project Structure
 
 ```plaintext
-src/
-├── components/
-│   ├── charts/
-│   ├── Navbar.jsx
-│   ├── Sidebar.jsx
-│
-├── pages/
-│   ├── Dashboard.jsx
-│   ├── MonthlyView.jsx
-│   ├── ComparisonPage.jsx
-│   ├── Login.jsx
-│
-├── context/
-│   ├── AppContext.jsx
-│
-├── transactions/
-│   ├── TransactionModal.jsx
-│   ├── TransactionList.jsx
-│
-├── utils/
-│   ├── exportData.js
+src/ │ ├── assets/ │ │ ├── components/ │ │ ├── charts/ │ │ │ ├── ComparisonChart.jsx │ │ │ ├── LineChartComponent.jsx │ │ │ ├── PieChartComponent.jsx │ │ ├── Navbar.jsx │ │ ├── Sidebar.jsx │ │ ├── context/ │ │ ├── AppContext.jsx │ │ ├── dashboard/ │ │ ├── DashboardCards.jsx │ │ ├── Insights.jsx │ │ ├── data/ │ │ ├── dummyData.js │ │ ├── pages/ │ │ ├── Dashboard.jsx │ │ ├── MonthlyView.jsx │ │ ├── ComparisonPage.jsx │ │ ├── Login.jsx │ │ ├── transactions/ │ │ ├── TransactionList.jsx │ │ ├── TransactionModal.jsx │ │ ├── utils/ │ │ ├── exportData.js │ │ ├── App.jsx │ ├── App.css
 ```
 
 ---
