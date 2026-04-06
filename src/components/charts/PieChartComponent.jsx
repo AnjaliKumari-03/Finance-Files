@@ -6,7 +6,6 @@ export default function PieChartComponent({ data }) {
   const [activeIndex, setActiveIndex] = useState(null);
   const [tooltipData, setTooltipData] = useState(null);
 
-  // ✅ CATEGORY DATA
   const categoryData = Object.values(
     (data || []).reduce((acc, t) => {
       if (t.type === "expense") {
@@ -87,7 +86,6 @@ export default function PieChartComponent({ data }) {
         </ResponsiveContainer>
       )}
 
-      {/* ✅ CUSTOM TOOLTIP */}
       {tooltipData && (
         <div className="mt-3 bg-white px-4 py-2 rounded-lg shadow text-sm w-fit">
           <span className="font-semibold text-blue-700">
@@ -99,7 +97,7 @@ export default function PieChartComponent({ data }) {
         </div>
       )}
 
-      {/* ✅ LEGEND */}
+     
       <div className="mt-4 space-y-1">
         {categoryData.map((item, index) => (
           <div key={index} className="flex items-center gap-2 text-sm">
