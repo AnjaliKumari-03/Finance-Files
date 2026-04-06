@@ -1,17 +1,17 @@
-# 💰 Finance Dashboard
+# 💰 Finance Files – Finance Dashboard
 
-A responsive and interactive **Finance Dashboard** built using React.js that allows users to track income, expenses, and analyze financial data using charts and insights.
+A responsive and interactive **Finance Dashboard** built using React.js that helps users track income, expenses, and analyze financial data through charts and insights.
 
 ---
 
 ## 📌 Overview
 
-This project is designed to provide a simple and effective way to manage personal finances. It enables users to:
+This project provides a simple and efficient way to manage personal finances. It allows users to:
 
-* Track transactions (income & expenses)
+* Track income and expenses
 * Analyze spending patterns
-* View insights through charts
-* Compare monthly financial data
+* View insights using charts
+* Compare financial data across months
 
 The application is fully client-side and uses **localStorage** for data persistence.
 
@@ -19,53 +19,49 @@ The application is fully client-side and uses **localStorage** for data persiste
 
 ## 🧠 Approach
 
-The application is built using a **component-based architecture** in React.
+The application follows a **component-based architecture** for better scalability and maintainability.
 
-### 🔹 1. State Management
+### 🔹 State Management
 
-* Used **Context API** (`AppContext.jsx`) to manage:
+* Managed using **Context API (`AppContext.jsx`)**
+* Stores:
 
   * Transactions
   * Current user
   * Role (Admin / Viewer)
 
-### 🔹 2. Data Handling
+### 🔹 Data Handling
 
-* Transaction data is stored in **localStorage**
-* Data is filtered based on:
+* Data is stored in **localStorage**
+* Filtered based on:
 
   * Logged-in user
   * Selected month
 
-### 🔹 3. Component Design
+### 🔹 Component Design
 
-* UI is divided into reusable components:
+* Modular and reusable components:
 
-  * Charts (Line, Pie, Bar)
+  * Charts
   * Sidebar & Navbar
   * Transaction Modal
-* Each component handles a specific responsibility
 
-### 🔹 4. Chart Integration
+### 🔹 Charts & Visualization
 
-* Used **Recharts** for visualization:
+* Implemented using **Recharts**
 
   * Line Chart → Balance trend
   * Pie Chart → Category-wise expenses
   * Bar Chart → Monthly comparison
 
-### 🔹 5. Role-Based Access
+### 🔹 Role-Based Access
 
-* Admin:
+* Admin → Add transactions
+* Viewer → View only
 
-  * Can add transactions
-* Viewer:
+### 🔹 Theme Handling
 
-  * Can only view data
-
-### 🔹 6. Theme Management
-
-* Implemented Dark/Light mode using:
+* Dark/Light mode using:
 
   * Local state
   * CSS class toggling
@@ -79,33 +75,32 @@ The application is built using a **component-based architecture** in React.
 
 * Displays:
 
-  * Total Balance
-  * Total Income
-  * Total Expense
-* Line chart for balance trend
+  * Balance
+  * Income
+  * Expense
+* Line chart for trend analysis
 * Pie chart for spending breakdown
 
 ---
 
 ### 📅 Monthly View
 
-* Select a specific month
-* View transactions for that month
-* Filtered chart visualization
+* Select month
+* View filtered transactions
+* Category-wise visualization
 
 ---
 
 ### 📈 Comparison Page
 
-* Bar chart showing monthly expenses
-* Displays:
+* Monthly expense comparison (Bar Chart)
+* Shows:
 
   * Expense per month
   * Highest spending month
-* Pie chart for category comparison
-* Shows:
+* Category analysis:
 
-  * Total expense per category
+  * Total per category
   * Highest expense category
 
 ---
@@ -118,45 +113,42 @@ The application is built using a **component-based architecture** in React.
   * Amount
   * Category
   * Date
-* Data is stored in localStorage
+* Data stored in localStorage
 
 ---
 
 ### 📤 Export Functionality
 
-* Export transaction data as:
+* Export data as:
 
-  * CSV (for Excel)
-  * JSON (raw data)
+  * CSV
+  * JSON
 
 ---
 
 ### 🌙 Dark / Light Mode
 
 * Toggle from sidebar
-* Applied across entire application
-* Saved in localStorage
+* Applied globally
+* Stored in localStorage
 
 ---
 
 ### 📱 Responsive Design
 
-* Works on:
-
-  * Mobile
-  * Tablet
-  * Desktop
+* Works across all devices
+* Clean and modern UI
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **React.js**
-* **Recharts**
-* **Tailwind CSS**
-* **Context API**
-* **LocalStorage**
-* **Git & GitHub**
+* React.js
+* Recharts
+* Tailwind CSS
+* Context API
+* LocalStorage
+* Git & GitHub
 
 ---
 
@@ -188,7 +180,7 @@ npm run dev
 
 ### 5. Open in Browser
 
-```bash
+```
 http://localhost:5173
 ```
 
@@ -197,7 +189,58 @@ http://localhost:5173
 ## 📁 Project Structure
 
 ```plaintext
-src/ │ ├── assets/ │ │ ├── components/ │ │ ├── charts/ │ │ │ ├── ComparisonChart.jsx │ │ │ ├── LineChartComponent.jsx │ │ │ ├── PieChartComponent.jsx │ │ ├── Navbar.jsx │ │ ├── Sidebar.jsx │ │ ├── context/ │ │ ├── AppContext.jsx │ │ ├── dashboard/ │ │ ├── DashboardCards.jsx │ │ ├── Insights.jsx │ │ ├── data/ │ │ ├── dummyData.js │ │ ├── pages/ │ │ ├── Dashboard.jsx │ │ ├── MonthlyView.jsx │ │ ├── ComparisonPage.jsx │ │ ├── Login.jsx │ │ ├── transactions/ │ │ ├── TransactionList.jsx │ │ ├── TransactionModal.jsx │ │ ├── utils/ │ │ ├── exportData.js │ │ ├── App.jsx │ ├── App.css
+Finance-Files/
+│
+├── node_modules/
+├── public/
+│
+├── src/
+│   ├── assets/
+│
+│   ├── components/
+│   │   ├── charts/
+│   │   │   ├── ComparisonChart.jsx
+│   │   │   ├── LineChartComponent.jsx
+│   │   │   ├── PieChartComponent.jsx
+│   │   │
+│   │   ├── Navbar.jsx
+│   │   ├── Sidebar.jsx
+│
+│   ├── context/
+│   │   ├── AppContext.jsx
+│
+│   ├── dashboard/
+│   │   ├── DashboardCards.jsx
+│   │   ├── Insights.jsx
+│
+│   ├── data/
+│   │   ├── dummyData.js
+│
+│   ├── pages/
+│   │   ├── Dashboard.jsx
+│   │   ├── MonthlyView.jsx
+│   │   ├── ComparisonPage.jsx
+│   │   ├── Login.jsx
+│
+│   ├── transactions/
+│   │   ├── TransactionList.jsx
+│   │   ├── TransactionModal.jsx
+│
+│   ├── utils/
+│   │   ├── exportData.js
+│
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   ├── main.jsx
+│
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+├── eslint.config.js
+├── README.md
 ```
 
 ---
@@ -213,10 +256,10 @@ src/ │ ├── assets/ │ │ ├── components/ │ │ ├── chart
 
 ## 💡 Future Improvements
 
-* Add backend (Node.js + MongoDB)
-* User authentication system
-* Budget tracking feature
+* Backend integration (Node.js + MongoDB)
+* Authentication system
 * PDF report generation
+* Budget tracking system
 * Notifications for spending limits
 
 ---
@@ -229,6 +272,6 @@ src/ │ ├── assets/ │ │ ├── components/ │ │ ├── chart
 
 ## 📌 Conclusion
 
-This project demonstrates a complete frontend solution for financial tracking, combining **state management, data visualization, and user interaction** in a clean and scalable architecture.
+This project demonstrates a complete frontend solution for financial tracking using modern React practices, data visualization, and clean UI design.
 
 ---
