@@ -90,7 +90,7 @@ export default function PieChartComponent({ data }) {
       {/* ✅ CUSTOM TOOLTIP */}
       {tooltipData && (
         <div className="mt-3 bg-white px-4 py-2 rounded-lg shadow text-sm w-fit">
-          <span className="font-semibold text-gray-700">
+          <span className="font-semibold text-blue-700">
             {tooltipData.name}
           </span>
           {" : "}
